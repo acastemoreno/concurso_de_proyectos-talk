@@ -21,6 +21,6 @@ var SLIDE_CONFIG = {
      gplus: '', 
      twitter: '', 
      www: '', 
-     github: 'http://github.com/acastemoreno', 
+     github: '', 
    }]
 };
