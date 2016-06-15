@@ -1,7 +1,7 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Elixir and Phoenix Framework', 
+     title: 'Mejoramiento Informático en el Sistema de Matrícula', 
      subtitle: 'Phoenix Language', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
@@ -16,7 +16,7 @@ var SLIDE_CONFIG = {
  
    // Author information
    presenters: [{
-     name: 'Albert Castellano Moreno', 
+     name: 'Albert Castellano Moreno, Gabriela Alatrista Solís', 
      company: '', 
      gplus: '', 
      twitter: '', 

@@ -1,8 +1,8 @@
-#+TITLE: Elixir and Phoenix Framework
+#+TITLE: Mejoramiento Informático en el Sistema de Matrícula
 #+SUBTITLE: Phoenix Language
-#+DATE: 2016/06/04
-#+AUTHOR: Albert Castellano Moreno
-#+EMAIL: acastemoreno@gmail.com
+#+DATE: 2016/06/15
+#+AUTHOR: Albert Castellano Moreno, Gabriela Alatrista Solís
+#+EMAIL: acastemoreno@gmail.com, gabriela123321@gmail.com
 #+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
 #+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
 #+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
@@ -14,11 +14,9 @@
 #+LANGUAGE: es
 #+SELECT_TAGS: export
 
-#+GITHUB: http://github.com/acastemoreno
-
 #+FAVICON: images/phoenix.png
-#+ICON: images/phoenix.svg
-#+HASHTAG: #phoenix #amiguitos #makerlab
+#+ICON: images/phoenix.ng
+#+HASHTAG: #concurso-de-proyectos
 
 
 
