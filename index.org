@@ -15,7 +15,7 @@
 #+SELECT_TAGS: export
 
 #+FAVICON: images/phoenix.png
-#+ICON: images/phoenix.ng
+#+ICON: images/phoenix.png
 #+HASHTAG: #concurso-de-proyectos
 
 
