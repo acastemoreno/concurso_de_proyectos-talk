@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
      title: 'Mejoramiento Informático en el Sistema de Matrícula', 
-     subtitle: 'Phoenix Language', 
+     subtitle: 'Docente: Ing. ENRIQUE SARMIENTO SARMIENTO', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
@@ -16,7 +16,7 @@ var SLIDE_CONFIG = {
  
    // Author information
    presenters: [{
-     name: 'Albert Castellano Moreno, Gabriela Alatrista Solís', 
+     name: 'ALumnos: Albert Castellano Moreno, Gabriela Alatrista Solís', 
      company: '', 
      gplus: '', 
      twitter: '', 
