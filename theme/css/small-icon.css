@@ -1,7 +1,7 @@
 slides > slide:not(.nobackground):before {
 background: url(../../images/phoenix.png) no-repeat 0 50%;
 font-size: 12pt;
-content: "#concurso-de-proyectos";
+content: "#concurso-de-proyectos-ABET";
 position: absolute;
 bottom: 20px;
 left: 60px;

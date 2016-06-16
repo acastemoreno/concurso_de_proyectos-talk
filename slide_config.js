@@ -16,7 +16,7 @@ var SLIDE_CONFIG = {
  
    // Author information
    presenters: [{
-     name: 'ALumnos: Albert Castellano Moreno, Gabriela Alatrista Solís', 
+     name: 'Alumnos: Albert Castellano Moreno, Gabriela Alatrista Solís', 
      company: '', 
      gplus: '', 
      twitter: '', 
