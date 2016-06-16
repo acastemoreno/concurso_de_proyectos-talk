@@ -14,8 +14,8 @@
 #+LANGUAGE: es
 #+SELECT_TAGS: export
 
-#+FAVICON: images/phoenix.png
-#+ICON: images/phoenix.png
+#+FAVICON: images/uni.png
+#+ICON: images/uni.png
 #+HASHTAG: #concurso-de-proyectos-ABET
 
 
