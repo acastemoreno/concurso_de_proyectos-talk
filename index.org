@@ -1,4 +1,4 @@
-#+TITLE: Mejoramiento Informático en el Sistema de Matrícula
+#+TITLE: Estudio Técnico para la Implementación y Mejoramiento Informático del Sistema de Matrícula en la Facultad de Ingeniería Mecánica
 #+SUBTITLE: Docente: Ing. ENRIQUE SARMIENTO SARMIENTO
 #+DATE: 2016/06/15
 #+AUTHOR: Alumnos: Albert Castellano Moreno, Gabriela Alatrista Solís
@@ -35,7 +35,7 @@
 - La matrícula debe cargar los datos de la prematrícula para poder ser editarlo antes del turno respectivo de matrícula.
 - El resultado de la prematricula debe mostrar al alumno el puesto dentro de las vacantes que está ocupando y que probablemente ocupará dentro de matrícula.
 - Asitencia y publicacion de notas.
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 750px
 [[file:images/mapa-morfologico.png]]
@@ -86,7 +86,7 @@ Entes Involucrados:
 #+BEGIN_QUOTE
 =Servidor=: planes mensuales junto con caracteristicas tecnicas.
 #+END_QUOTE
-** 
+**
 Elixir:
 - Espacio en ram por proceso: 1-1.5kb
 - Velocidad de respuesta: 3ms en promedio
@@ -103,7 +103,7 @@ Postgresql:
 | Confirmar matrícula |7 |1 |0 |0 |
 | Tiempo real secciones (7 cursos suscritos x 3 secciones por curso x 25 número de vacantes/sección=525) |0 |0 |7 |525 |
 | Total x alumno |* 11 |12 |7 |525 |
-** 
+**
 - Número de alumnos x entidad (FIM, FIC ó toda la UNI): X
 - Número de turnos (lapso de media hora de vigencia): 20
 - Número de alumnos por turno: X/20
@@ -113,7 +113,7 @@ Postgresql:
 | Total x alumno | 11 |12 |7 |525 |
 | Total por turno (media hora) | 0.55*X |0.6*X |0.35*X |26.25*X |
 | Total / segundo (asumiendo mayor demanda en los 10 primeros minutos) | 0.000916667*X |0.001*X |0.00058333*X |0.04375*X |
-** 
+**
 - Espacio en RAM ocupada: 1.5kb*X
 - RAM del servidor (512MB ó 1024MB ó 2048MB): Y [MB]
 - Transferencia del servidor (1TB ó 2TB ó 3TB): Z [MB]
@@ -122,7 +122,7 @@ Ecuaciones:
   + 1.5*X[Kb]<Y*1024[Kb]
 - Transferencia de datos (Número de alumnos*HttpTotalxalumno*Tamaño de data por http request[50Kb]):
   + X*(11)*50[Kb]<Z*1024*1024[Kb]
-** 
+**
 Resumiendo:
 - Número de alumnos x entidad (FIM, FIC ó toda la UNI): X
 - RAM del servidor (512MB ó 1024MB ó 2048MB): Y [MB]
@@ -138,7 +138,7 @@ Requerimientos:
 En las ecuaciones:
 - 11124<512*682.6
 - 11124<23831.27
-** 
+**
 =Conclusiones=:
 - 11124<349491.2
 - 11.124<14000
@@ -158,7 +158,7 @@ Ajuste de curva del numero de alumnos vs tiempo de los ultimos 5 años:
 #+ATTR_HTML: :width 500px
 [[file:images/comportamiento.png]]
 #+END_CENTER
-** 
+**
 Determinando el valor de t para que el sistema llegue a su limite:
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 700px
@@ -206,7 +206,7 @@ Subsistema de Alumnos:
 |Componente de Reporte de Asistencia |El alumno podrá verificar su asistencia diaria. |
 |Componente de Avance Curricular | El alumno podrá ver el plan de estudios de su especialidad remarcando los cursos llevados y los que faltan por terminar.|
 |Componente de Notas a la fecha | El alumno podrá ver las notas publicadas de cada curso según el sistema de evaluación.|
-** 
+**
 :PROPERTIES:
 :ARTICLE:  smaller
 :END:
@@ -221,8 +221,8 @@ Subsistema de Plana Docente:
 Subsistema de planta física:
 | Componentes |Detalle |
 |--------+---------------------|
-|Componente de Planta Física | Registro y actualización de estado e información de ambientes destinados al dictado de clases. | 
-** 
+|Componente de Planta Física | Registro y actualización de estado e información de ambientes destinados al dictado de clases. |
+**
 :PROPERTIES:
 :ARTICLE:  smaller
 :END:
@@ -230,7 +230,8 @@ Subsistema de programación académica:
 | Componentes |Detalle |
 |--------+---------------------|
 |Componente de Cursos en periodo academico | Registra nuevo periodo academico junto con los cursos dictados. |
-|Componente de Registro de Secciones | Registro de secciones de cada curso dictado. Abarca información sobre horario de clase (teoría, práctica ó laboratorio) y docentes a cargo. |
+|Componente de Registro de Secciones | Registro de secciones de cada curso dictado en el periodo academico. |
+|Componente de Registro de Horarios | Registro de Horarios de cada seccion. Abarca información sobre tipo de horario de clase (teoría, práctica ó laboratorio) y docentes a cargo. |
 |Componente de publicación de matricula | Publicación de fecha de prematricula y matrícula. La fecha matrícula deberá ser de 15 días de anticipación según reglamento. |
 Subsistema de matrícula:
 | Componentes |Detalle |
@@ -239,18 +240,18 @@ Subsistema de matrícula:
 |Componente de Reporte y Análisis de Pre-matricula | Reporta la pre-matricula. Brinda un informe sobre que cursos necesitan ser aperturados por demanda de vacantes. |
 |Componente de Matricula | Matrícula de alumnos en según turno. El alumno podrá armar su horario antes de que inicie su turno pero solo podrá confirmar su matricula en este turno. |
 |Componente de Aviso en Tiempo Real de las vacantes durante Matricula | El alumno podrá suscribirse a reportes en tiempo real del número de vacantes disponibles en secciones que este elija. |
-** 
+**
 :PROPERTIES:
 :ARTICLE:  smaller
 :END:
 Subsistema de asistencia:
 | Componentes |Detalle |
 |--------+---------------------|
-|Componente de Registro de Notas | Registro de asistencia Docente y Alumno. |
+|Componente de Registro de Asistencia | Registro de asistencia Docente y Alumno. |
 Subsistema de notas:
 | Componentes |Detalle |
 |--------+---------------------|
-|Componente de Registro de Asistencia | Permitirá publicar notas según sistema de evaluación de cada curso. |
+|Componente de Registro de Notas | Permitirá publicar notas según sistema de evaluación de cada curso. |
 |Componente de estado de Curso | Se  comunicara al alumno mediante correo el estado final del cursos llevado en el ciclo, esto cuando se publique la ultima nota requerida para saber este estado. |
 ** Descripción de Partes:
 :PROPERTIES:
@@ -273,38 +274,38 @@ El Modelo es el elementos más importante de la etapa de diseño. Determina como
 #+ATTR_HTML: :width 600px
 [[file:images/representacion-tabla.png]]
 #+END_CENTER
-** 
+**
 - one-to-many: Representa la relacion entre un elemento dentro de la tabla con varios elementos dentro de otra tabla.
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 600px
 [[file:images/one-to-many.png]]
 #+END_CENTER
-** Modelo por subsistema
+** Modelo por subsistemas
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 600px
 [[file:images/sub_malla.png]]
 #+END_CENTER
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 600px
 [[file:images/sub_academica.png]]
 #+END_CENTER
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 600px
 [[file:images/sub_docente_fisica.png]]
 #+END_CENTER
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 400px
 [[file:images/sub_alumnos.png]]
 #+END_CENTER
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 500px
 [[file:images/sub_matri_asiste_notas.png]]
 #+END_CENTER
-** 
+**
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 500px
 [[file:images/sub_all.png]]

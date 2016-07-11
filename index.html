@@ -35,7 +35,7 @@
          <p data-config-presenter><!-- populated from slide_config.json --></p>
        </hgroup>
     </slide>
-  
+
 
 
 
@@ -588,7 +588,7 @@ En las ecuaciones:
 </p>
 <ul>
 <li>11124&lt;349491.2</li>
-<li>11.124&lt;14000</li>
+<li>11.124&lt;23831.27</li>
 </ul>
 <p>
 El sistema creado es compatible con el valor típico de alumnos de toda la universidad. Esto significa que se podria manejar la matricula de todos los alumnos de la UNI en un solo dia si asi se quisiese.
@@ -990,7 +990,12 @@ Subsistema de programación académica:
 
 <tr>
 <td class="left">Componente de Registro de Secciones</td>
-<td class="left">Registro de secciones de cada curso dictado. Abarca información sobre horario de clase (teoría, práctica ó laboratorio) y docentes a cargo.</td>
+<td class="left">Registro de secciones de cada curso dictado en el periodo academico.</td>
+</tr>
+
+<tr>
+<td class="left">Componente de Registro de Horarios</td>
+<td class="left">Registro de Horarios de cada seccion. Abarca información sobre tipo de horario de clase (teoría, práctica ó laboratorio) y docentes a cargo.</td>
 </tr>
 
 <tr>
@@ -1072,7 +1077,7 @@ Subsistema de asistencia:
 </thead>
 <tbody>
 <tr>
-<td class="left">Componente de Registro de Notas</td>
+<td class="left">Componente de Registro de Asistencia</td>
 <td class="left">Registro de asistencia Docente y Alumno.</td>
 </tr>
 </tbody>
@@ -1096,7 +1101,7 @@ Subsistema de notas:
 </thead>
 <tbody>
 <tr>
-<td class="left">Componente de Registro de Asistencia</td>
+<td class="left">Componente de Registro de Notas</td>
 <td class="left">Permitirá publicar notas según sistema de evaluación de cada curso.</td>
 </tr>
 
@@ -1202,7 +1207,7 @@ El Modelo es el elementos más importante de la etapa de diseño. Determina como
 <slide id="sec-"  >
 <hgroup class="">
        <h2 class=" "><div id="outline-container-orgheadline30" class="outline-3">
-<h3 id="orgheadline30">Modelo por subsistema</h3>
+<h3 id="orgheadline30">Modelo por subsistemas</h3>
 </div>
 </h2>
        <h3></h3>
@@ -1331,6 +1336,29 @@ El Modelo es el elementos más importante de la etapa de diseño. Determina como
 
 </slide>
 
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgheadline30" class="outline-3">
+<h3 id="orgheadline30">Controladores por subsistemas</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/sub_malla.png" alt="sub_malla.png" width="600px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+
 </slide>
 </slide>
 <slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
@@ -1345,11 +1373,11 @@ El Modelo es el elementos más importante de la etapa de diseño. Determina como
 
 </slide>
 <slide class="backdrop"></slide>
-</slides> 
+</slides>
 <!--[if IE]>
   <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
   <script>CFInstall.check({mode: 'overlay'});</script>
 <![endif]-->
-</body> 
+</body>
 
 </html>
